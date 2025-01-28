@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Khemetna Company</title>
+    <link rel="icon" type="image/x-icon" href="Company papers/LOOOOGO.png">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+  font-size: 2rem;
+  color: #07001f;
+}
+
+p {
+  margin-bottom: 1.7rem;
+  font-size: 25px;
+}
+.or {
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+
+
+        .navbar{
+            width: 1200px;
+            height: 75px;
+            margin: auto;
+        }
+
+        .icon{
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+
+        .logo{
+            color: #ff7200;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            float: left;
+            padding-top: 10px;
+            margin-top: 5px
+        }
+
+        .menu{
+            width: 400px;
+            float: left;
+            height: 70px;
+        }
+
+        ul{
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul li{
+            list-style: none;
+            margin-left: 62px;
+            margin-top: 27px;
+            font-size: 14px;
+        }
+
+        ul li a{
+            text-decoration: none;
+            color: #110535;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+
+        ul li a:hover{
+            color: #ff7200;
+        }
+
+        .search{
+            width: 330px;
+            float: left;
+            margin-left: 1000px;
+        }                     
+
+        .srch{
+            font-family: 'Times New Roman';
+            width: 200px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid #ff7200;
+            margin-top: 13px;
+            color: black;
+            border-right: none;
+            font-size: 16px;
+            float: left;
+            padding: 10px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        .btn{
+            width: 100px;
+            height: 40px;
+            background: #ff7200;
+            border: 2px solid #ff7200;
+            margin-top: 13px;
+            color: white;
+            font-size: 15px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            transition: 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            color: #000;
+        }
+
+        .btn:focus{
+            outline: none;
+        }
+
+        .srch:focus{
+            outline: none;
+        }
+
+        .content{
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: #ec5f5f70;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content .par{
+            padding-left: 20px;
+            padding-bottom: 25px;
+            font-family: Arial;
+            letter-spacing: 1.2px;
+            line-height: 30px;
+        }
+
+        .content h1{
+            font-family: 'Times New Roman';
+            font-size: 50px;
+            padding-left: 20px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        .content .cn{
+            width: 160px;
+            height: 40px;
+            background: #ff7200;
+            border: none;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .4s ease;
+        }
+
+        .content .cn a{
+            text-decoration: none;
+            color: #000;
+            transition: .3s ease;
+        }
+        .content span{
+            color: #ff7200;
+            font-size: 65px
+        }
+
+        .form{
+            width: 250px;
+            height: 380;
+            background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+            position: absolute;
+            top: 100px;
+            left: 870px;
+            transform: translate(0%,-5%);
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .form h2{
+            width: 220px;
+            font-family: sans-serif;
+            text-align: center;
+            color: #ff7200;
+            font-size: 22px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 2px;
+            padding: 8px;
+        }
+
+        .form input{
+            width: 240px;
+            height: 35px;
+            background: transparent;
+            border-bottom: 1px solid #ff7200;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: white;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            font-family: sans-serif;
+        }
+
+        .form input:focus{
+            outline: none;
+        }
+
+        ::placeholder{
+            color: rgb(18, 18, 18);
+            font-family: Arial;
+        }
+
+        .btnn{
+            width: 240px;
+            height: 40px;
+            background: #ff7200;
+            border: none;
+            margin-top: 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            transition: 0.4s ease;
+        }
+
+        .btnn:hover{
+            background: white;
+            color: #ff7200;
+        }
+
+        .btnn a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .form .link{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .form .link a{
+            text-decoration: none;
+            color: #ff7200;
+        }
+
+        .liw{
+            padding-top: 15px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .icons a{
+            text-decoration: none;
+            color: #dfdce8;
+        }
+
+        .icons ion-icon{
+            color: #110535;
+            font-size: 30px;
+            padding-left: 14px;
+            padding-top: 5px;
+            transition: 0.3s ease;
+        }
+
+        .icons ion-icon:hover{
+            color: #ff7200;
+        }
+        #img {
+  border-radius: 10px 10px;
+}
+
+#grids_footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  grid-template-areas:
+    "box1 box2 box3"
+    "box4 box4 box4";
+}
+
+#About_us,
+#Contact,
+#Follow_us {
+  background-color: #3F7C88;
+  border-color: #3F7C88;
+  width: 100%;
+}
+
+#Follow_us img {
+  height: 50px;
+  width: 50px;
+  margin: 3px;
+}
+
+#End {
+  height: 8vh;
+  grid-area: box4;
+  background-color: #A5DBDC;
+  border-color: #A5DBDC;
+  color: rgb(6, 6, 84);
+}
+
+#grids_footer h2 {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#grids_footer p {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+}
+footer {
+  clear: both;
+  margin-top: 20px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main"> 
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">khemetna Company</h2>
+            </div>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Smart tent.html">Smart Tent</a></li>
+        </ul>
+        </div>
+<div class="search">
+      <input class="srch" type="search" id="searchInput" placeholder="Type to search">
+      <button class="btn">Search</button>
+</div>
+    </div>
+    <div class="content">
+        <h1>Khemetna<br><span>Company</span><br>Web</h1>
+    <p class="par">
+        This website empowers children and refugees affected by war and<br> poverty, providing access to essentials and education to restore hope<br> and build a brighter future.<br> By connecting those in need with compassionate donors, we aim to <br>transform lives and <br>create opportunities for a better tomorrow. 🌟​</p>
+    <button class="cn"><a href="#">JOIN US</a></button>
+
+    <div class="form">
+        <h2>Login Here</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Enter Email Here" required>
+            <input type="password" id="password" placeholder="Enter Password Here" required>
+            <button type="submit" class="btnn">Login</button>
+        </form>
+            <p class="link">Don't have an account?<br>
+                <a href="The Login page.html">Sign up here</a></p>
+                
+    </div>
+    </div>
+    <script>
+         document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = document.getElementById('email').value.trim();
+            var password = document.getElementById('password').value.trim;
+            window.location.href = "The main page.html";
+            
+        if (email && password) {
+            alert("Login successful! Redirecting...");
+            window.location.href = "The main page.html";
+        } else {
+            alert("Please enter both email and password.");
+        }});
+        document.querySelector('.btn').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        var searchInput = document.getElementById('searchInput');
+        var searchText = searchInput.value.trim().toLowerCase();
+        var pages = {
+            "playing hub": "Let's Play.html.html",
+            "crafts lab": "Crafts Lab.html",
+            "short fictional stories area": "Short Fictional Stories.html",
+            "library": "Library.html",
+            "stories & volunteering area": "Stories & Helping Area.html",
+            "learning area": "Learning area.html",
+            "cooking area": "Food types.html",
+            "about us": "The main page.html",
+            "Improving Together" : "Improving Together.html"
+        };
+
+        if (!searchText) {
+        alert("Please enter a search term."); 
+        return;
+    }
+
+        if (pages[searchText]) {
+            console.log("Redirecting to:", pages[searchText]);
+            window.location.href = pages[searchText]; 
+        } else {
+            alert('Page not found. Please check the search term and try again.'); 
+        }
+    });
+
+
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<div id='grids_footer'>
+    <div id ='About_us'>
+      <center>
+        <h2 id="AU">About us</h2>
+        <p id="line">We provide a website that provides a service to help the people in the war</p>
+      </center>
+    </div>
+    <div id ='Contact'>
+      <center>
+        <h2 id="Con">Contact us</h2>
+        <p>You can contact with us by phone number<br><br>0785010000<br></p>
+      </center>
+    </div>
+    <div id ='Follow_us'>
+      <center>
+        <h2>Follow us on:</h2>
+        <img src="https://static-00.iconduck.com/assets.00/facebook-icon-512x512-seb542ju.png" wedth="20" height="20" id="a">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" id="a" wedth="20" height="20">      
+      </center>
+    </div>
+    <div id ='End'>
+      <center><p> copyright &copy; Khemetna Company Organizer| Hour Omran </p></center>
+    </div>
+   </div>
+  </footer>
+  </body>
+  </html>

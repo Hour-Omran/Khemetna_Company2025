@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="style3.css">
+    <a href="The main page.html" class="a" style = "text-decoration: none;">About us</a>
+    <a href="Food types.html" class="a" style = "text-decoration: none;">Cooking Area</a>
+    <a href="Learning area.html" class="a" style = "text-decoration: none;">Learning Area</a>
+    <a href="Stories & Helping Area.html" class="a" style = "text-decoration: none;">Stories & Volunteering Area</a>
+    <a href="Library.html" class="a" style = "text-decoration: none;">Library</a>
+    <a href="Short Fictional Stories.html" class="a" style = "text-decoration: none;">Short Fictional Stories Area</a>
+    <a href="Crafts Lab.html" class="a" style = "text-decoration: none;">Crafts Lab</a>
+    <a href="Let's Play.html" class="a" style = "text-decoration: none;">Playing Hub</a>
+    <a href="Improving Together.html" class="a" style = "text-decoration: none;">Improving Together</a>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #quiz-container {
+            display: none;
+            padding: 20px;
+        }
+        .option-button {
+            margin: 5px;
+            padding: 10px;
+            background-color: lightblue;
+            border: none;
+            cursor: pointer;
+        }
+        .option-button:hover {
+            background-color: lightcoral;
+        }
+        .option-button.disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        #nextButton {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: lightgreen;
+            border: none;
+            cursor: pointer;
+        }
+        #nextButton:hover {
+            background-color: yellow;
+        }
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+            display: none;
+        }
+        #video-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #progress {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        #score {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AI Lesson:</h1>
+    
+    <div id="video-container">
+        <video width="450" height="450" controls>
+            <source src="Images and videos/Artificial Intelligence(Tomorrow's Glow) The Final.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <button onclick="startQuiz()">Start Quiz</button>
+
+    <div id="quiz-container">
+        <div id="score">Score: 0</div>
+        <div id="question-container">
+            <p id="questionText"></p>
+            <div id="options"></div>
+        </div>
+        <div id="progress"></div>
+        <button id="nextButton" style="display:none;" onclick="nextQuestion()">Next</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                "question": "refers to the simulation of human intelligence by machines programmed to think and learn. It enables systems to perform tasks that typically require human intelligence, such as problem-solving, learning, and decision-making.this defenition refers to:",
+                "options": ['AI','Deep learning', 'none'],
+                "answer": 'AI'
+            },
+            {
+                "question": " Healthcare: Diagnosing diseases and streamlining treatment plans is a example of AI that we use everyday.",
+                "options": [ 'False', 'True'],
+                "answer": 'True'
+            },
+            {
+                "question": " Training algorithms to make predictions.",
+                "options": ['Machine Learning:', 'Deep learning ', 'AI'],
+                "answer": 'Machine Learning:'
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function startQuiz() {
+            score = 0;
+            currentQuestionIndex = 0;
+            document.querySelector('button').style.display = 'none';
+            document.getElementById('video-container').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+            updateScore();
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const question = questions[currentQuestionIndex];
+            document.getElementById('questionText').innerHTML = question.question;
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+            question.options.forEach(option => {
+                const optionButton = document.createElement('button');
+                optionButton.classList.add('option-button');
+                optionButton.innerHTML = option;
+                optionButton.onclick = function () {
+                    if (!optionButton.classList.contains('disabled')) {
+                        checkAnswer(option, optionButton);
+                        disableOptions();
+                    }
+                };
+                optionsContainer.appendChild(optionButton);
+            });
+            document.getElementById('nextButton').style.display = 'none';
+            updateProgress();
+        }
+
+        function checkAnswer(selectedAnswer, button) {
+            const question = questions[currentQuestionIndex];
+            if (selectedAnswer === question.answer) {
+                score++;
+                updateScore();
+            }
+            button.style.backgroundColor = selectedAnswer === question.answer ? 'lightgreen' : 'red';
+            document.getElementById('nextButton').style.display = 'block';
+        }
+
+        function disableOptions() {
+            const optionButtons = document.querySelectorAll('.option-button');
+            optionButtons.forEach(button => {
+                button.classList.add('disabled');
+                button.disabled = true;
+            });
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById('quiz-container').style.display = 'none';
+                const resultText = `Quiz finished! Your score is ${score} out of ${questions.length}.`;
+                document.getElementById('result').innerHTML = resultText;
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('video-container').style.display = 'block';
+            }
+        }
+
+        function updateProgress() {
+            const progressText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+            document.getElementById('progress').innerHTML = progressText;
+        }
+
+        function updateScore() {
+            document.getElementById('score').innerHTML = `Score: ${score}`;
+        }
+
+    </script>
+    <br><br><br>
+  <div id='grids_footer'>
+    <div id ='About_us'>
+      <center>
+        <h2 id="AU">About us</h2>
+        <p id="line">We provide a website that provides a service to help the people in the war</p>
+      </center>
+    </div>
+    <div id ='Contact'>
+      <center>
+        <h2 id="Con">Contact us</h2>
+        <p>You can contact with us by phone number<br><br>0785010000<br></p>
+      </center>
+    </div>
+    <div id ='Follow_us'>
+      <center>
+        <h2>Follow us on:</h2>
+        <img src="https://static-00.iconduck.com/assets.00/facebook-icon-512x512-seb542ju.png" wedth="20" height="20" id="a">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" id="a" wedth="20" height="20">      
+      </center>
+    </div>
+    <div id ='End'>
+      <center><p> copyright &copy; Khemetna Company Organizer| Hour Omran </p></center>
+    </div>
+   </div>
+  </footer>
+</body>
+</html>

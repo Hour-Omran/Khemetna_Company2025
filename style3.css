@@ -1,0 +1,437 @@
+body {
+  background-color: rgba(0, 213, 228, 0.481);
+  color: rgba(91, 3, 86, 0.767);
+  background: #dfe9f5;
+}
+
+line {
+  color: rgb(0, 0, 0);
+}
+
+head {
+  background-color: rgb(84, 14, 101);
+}
+
+a {
+  background-color: rgba(64, 3, 68, 0.241);
+  color: rgba(170, 5, 118, 0.651);
+  text-decoration-line: none;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  .left-column {
+    width: 40%;
+  }
+  .right-column {
+    width: 60%;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  width: 330px;
+  padding: 2rem 0 1rem 0;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #062546;
+}
+
+p {
+  margin-bottom: 1.7rem;
+  font-size: 25px;
+}
+
+form input {
+  width: 85%;
+  outline: none;
+  border: none;
+  background: #dfe9f5;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.recover {
+  text-align: right;
+  font-size: 0.8rem;
+  margin: 0.2rem 1.7rem 0 0;
+}
+
+.recover a {
+  text-decoration: none;
+  color: #07001f;
+}
+
+button {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 8px 0;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 99%;
+  background: rgba(0, 55, 114, 0.308);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(30, 122, 105, 0.767);
+}
+
+.or {
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.icons i {
+  color: #07001f;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  margin-left: .9rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 2px solid #dfe9f5;
+}
+
+.icons i:hover {
+  color: #fff !important;
+  background: #07001f;
+  transition: 1s;
+}
+
+.icons i:first-child {
+  color: green;
+}
+
+.icons i:last-child {
+  color: blue;
+}
+
+.not-member {
+  font-size: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.not-member a {
+  color:tomato;
+  text-decoration: none;
+}
+
+.not-member a:hover {
+  text-decoration: underline;
+}
+
+header {
+  padding-top: 15px;
+  padding-right: 15px;
+  position: sticky;
+  display: flex;
+  margin: 10px;
+}
+
+header input {
+  width: 62%;
+  margin: 40px 1em 0;
+  height: 65px;
+}
+
+nav {
+  background-color: #3F7C88;
+  max-width: 100%;
+  margin-top: 20px;
+  padding: 0 20px;
+  position: sticky;
+  opacity: 0.9;
+  text-align: center;
+  border-radius: 10px 10px;
+  height: 80px;
+}
+
+nav a {
+  display: inline-block;
+  color: #d2e2e2;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #A5DBDC;
+  color: black;
+  border-radius: 10px 100px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+.logo {
+  width: 111%;
+  height: 400px;
+  border-radius: 10px 10px;
+}
+
+#item {
+  width: 178%;
+  height: 450px;
+  border-radius: 10px 10px;
+}
+
+.card {
+  text-align: center;
+  padding: 20px;
+  float: left;
+}
+
+.card-img-top {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px 10px;
+}
+
+.card h5 {
+  font-size: 25px;
+  color: #3F7C88;
+}
+
+#divs h2 {
+  color: #3F7C88;
+}
+
+#divs li {
+  font-size: 20px;
+}
+
+#login label {
+  font-size: 20px;
+  color: #3F7C88;
+}
+
+#login input {
+  border-radius: 10px 10px;
+  border: #3F7C88 solid;
+  height: 25px;
+  width: 300px;
+  font-size: 20px;
+}
+
+#login button {
+  border-radius: 10px 10px;
+  border: #3F7C88 solid;
+  height: 40px;
+  width: 150px;
+  font-size: 20px;
+  background-color: #3F7C88;
+  color: #d2e2e2;
+}
+
+#img {
+  border-radius: 10px 10px;
+}
+
+#grids_footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  grid-template-areas:
+    "box1 box2 box3"
+    "box4 box4 box4";
+}
+
+#About_us,
+#Contact,
+#Follow_us {
+  background-color: #3F7C88;
+  border-color: #3F7C88;
+  width: 100%;
+}
+
+#Follow_us img {
+  height: 50px;
+  width: 50px;
+  margin: 3px;
+}
+
+#End {
+  height: 8vh;
+  grid-area: box4;
+  background-color: #A5DBDC;
+  border-color: #A5DBDC;
+  color: rgb(6, 6, 84);
+}
+
+#grids_footer h2 {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#grids_footer p {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.not-member {
+  font-size: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.not-member a {
+  color:tomato;
+  text-decoration: none;
+}
+
+.not-member a:hover {
+  text-decoration: underline;
+}
+
+header {
+  padding-top: 15px;
+  padding-right: 15px;
+  position: sticky;
+  display: flex;
+  margin: 10px;
+}
+
+header input {
+  width: 62%;
+  margin: 40px 1em 0;
+  height: 65px;
+}
+
+nav {
+  background-color: #3F7C88;
+  max-width: 100%;
+  margin-top: 20px;
+  padding: 0 20px;
+  position: sticky;
+  opacity: 0.9;
+  text-align: center;
+  border-radius: 10px 10px;
+  height: 80px;
+}
+
+nav a {
+  display: inline-block;
+  color: #d2e2e2;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #A5DBDC;
+  color: black;
+  border-radius: 10px 100px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+.logo {
+  width: 111%;
+  height: 400px;
+  border-radius: 10px 10px;
+}
+
+#item {
+  width: 178%;
+  height: 450px;
+  border-radius: 10px 10px;
+}
+
+.card {
+  text-align: center;
+  padding: 20px;
+  float: left;
+}
+
+.card-img-top {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px 10px;
+}
+
+.card h5 {
+  font-size: 25px;
+  color: #3F7C88;
+}
+
+#divs h2 {
+  color: #3F7C88;
+}
+
+#divs li {
+  font-size: 20px;
+}
+
+#login label {
+  font-size: 20px;
+  color: #3F7C88;
+}
+
+#login input {
+  border-radius: 10px 10px;
+  border: #3F7C88 solid;
+  height: 25px;
+  width: 300px;
+  font-size: 20px;
+}
+
+#login button {
+  border-radius: 10px 10px;
+  border: #3F7C88 solid;
+  height: 40px;
+  width: 150px;
+  font-size: 20px;
+  background-color: #3F7C88;
+  color: #d2e2e2;
+}
